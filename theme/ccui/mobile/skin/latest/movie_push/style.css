@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* SIR 지운아빠 */
+
+/* 갤러리 목록 */
+#bo_movie_push {width: 1200px;min-height: 450px;margin: 70px auto;}
+#bo_movie_push h2 {margin:0;padding:0;width: 40%;float: left;font-size: 2.2em;}
+#bo_movie_push p{float:left;width:40%;line-height: 1.5em;clear:both;margin-top:20px;}
+#bo_movie_push > a{float:left; clear:both; margin-top:30px; width:20%; background:#57cc8e; text-align:center; color:#fff; padding:10px 0; border-radius:50px;}
+#bo_movie_push #gall_ul {width: 60%;margin-top: -90px;padding:0;list-style:none;zoom:1;float: right;}
+#bo_movie_push #gall_ul:after {display:block;visibility:hidden;clear:both;content:""}
+#bo_movie_push .gall_li {width: 98%;position:relative;margin:0 0 3px 3px;float:left;text-align:center;}
+
+#bo_movie_push .gall_con {width: 100%;position:relative;margin:0 auto;padding:0;list-style:none;}
+#bo_movie_push .gall_con li {margin:0;text-align: center;}
+#bo_movie_push .gall_con .gall_subject {display:inline-block;width:50px;}
+
+#bo_movie_push .gall_href {}
+#bo_movie_push .gall_href a:link, #bo_movie_push .gall_href a:focus, #bo_movie_push .gall_href a:hover {text-decoration:none;}
+#bo_movie_push .gall_href strong, #bo_movie_push .gall_href span {display:inline-block;text-align:center;line-height:10em;}
+
+#bo_movie_push .gall_href2 {border-bottom:0 !important;}
+
+#bo_movie_push .gall_text_href{width: 100%;margin:0;font-weight: 900!important;font-size: 1.1em;padding: 17px 0;color: orange;}
+#bo_movie_push .gall_text_href a {font-weight: 900!important;letter-spacing: -1px;color: #fe4e00;font-size: 17px;}
+#bo_movie_push .gall_text_href span {display:inline !important;font-weight: bolder;font-family: 'WOFF_3';}
+#bo_movie_push .gall_text_href img {}
+
+#bo_movie_push .gall_text_href2 {line-height:0.7em;}
+#bo_movie_push .gall_text_href2 a{text-align:left;display:block;overflow:hidden;text-overflow: ellipsis;line-height: 1.5em;white-space: nowrap;color:#666;}
+#bo_movie_push li.empty_list {padding:85px 0;text-align:center}
+#bo_movie_push img {}
+#bo_movie_push .data_view2{}

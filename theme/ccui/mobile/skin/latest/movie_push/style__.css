@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* SIR 지운아빠 */
+
+/* 갤러리 목록 */
+.g_color{ color:#b8b5b2; }
+.main_color {color: #ff4e00;}
+.title_texts{ font-size: 22px!important; padding-bottom: 10px;}
+#bo_prefer {margin:10px 0 0 0;}
+#bo_prefer h2 {margin:0;padding:0;font-size:16px;}
+#bo_prefer #gall_ul {margin:10px 0 0;padding:0;list-style:none;zoom:1}
+#bo_prefer #gall_ul:after {display:block;visibility:hidden;clear:both;content:""}
+#bo_prefer .gall_li {float:left;text-align:center;margin:-1px -1px 0 0;transition: all 0.5s ease;
+	 }
+
+#bo_prefer .gall_con {margin:0;padding:0;list-style:none;border:1px solid #dddddd;-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease; min-height: 230px;}
+
+
+
+#bo_prefer .gall_con li {margin:0;padding:10px 10px;text-align:left;-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease; }
+
+.gall_li:hover {background:#eee !important;-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease; }
+
+#bo_prefer .gall_con .gall_subject {display:inline-block;width:50px;}
+
+
+#bo_prefer .gall_href {padding:5px 10px;text-align:center !important;border-bottom:1px solid #dddddd;background:#fff !important;}
+#bo_prefer .gall_href a:link, #bo_prefer .gall_href a:focus, #bo_prefer .gall_href a:hover {text-decoration:none;}
+#bo_prefer .gall_href strong, #bo_prefer .gall_href span {display:inline-block;text-align:center;line-height:10em;}
+
+#bo_prefer .gall_href2 {border-bottom:0 !important;}
+
+#bo_prefer .gall_text_href {margin:0;padding:8px 10px 5px 10px !important;}
+#bo_prefer .gall_text_href a {font-weight:bold; font-size: 18px;}
+#bo_prefer .gall_text_href span {display:inline !important}
+#bo_prefer .gall_text_href img {margin:0}
+
+#bo_prefer .gall_text_href2 {margin:0;padding:2px 10px 8px 10px !important;height:25px; overflow:hidden;}
+
+#bo_prefer li.empty_list {padding:85px 0;text-align:center}
+
+#bo_prefer img {
+    vertical-align: top;   margin: 0 auto; display: block;
+}
+
+.data_view2{ height: 0px; line-height: 0px; }
+.boder_lines{ width: 100%; height: 1px;}
+.p_title{ font-size:18px;}

@@ -1,0 +1,64 @@
+<?php
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+include_once(G5_LIB_PATH.'/thumbnail.lib.php');
+
+// add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
+add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
+$board['bo_casting_push_height'] = 30;
+?>
+
+<div class="clearfix"></div>
+<!-- 게시판 목록 시작 { -->
+<div id="bo_casting_push" class="noto">
+    <ul id="gall_ul">
+        <?php for ($i=0; $i<count($list); $i++) {
+            if($i>0 && ($i % 4 == 0))
+               $style = 'clear:both;';
+            else
+              $style = '';
+            if ($i == 0) $k = 0;
+			  $k += 1;
+            if ($k % 4 == 0) $style .= "margin:-1px 0 0 0 !important;";        
+        ?>
+        <li class="gall_li">
+            <ul class="gall_con">
+                <?php
+                        $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $board['bo_casting_push_width'], $board['bo_casting_push_height']);
+                    if($list[$i]['href']) {
+
+                        if($thumb['src']) {
+                            $img_content = '<li class="gall_href" style="line-height:55px"><a href="'.$list[$i]['href'].'"><img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" width="'.$board['bo_casting_push_width'].'" height="'.$board['bo_casting_push_height'].'" class="border"></a></li>';
+                        } else {
+                            $img_content = '<li class="gall_href"><div style="height:55px;line-height:55px;text-align:center;"><a href="'.$list[$i]['href'].'"><i class="fa fa-recycle fa-2x" aria-hidden="true"></i></a></div></li>';
+                        }
+                        echo $img_content;
+                        ?>
+                    <li class="gall_text_href ellipsis">
+                      <a href="<?php echo $list[$i]['href'] ?>">
+                             <span class="p_titles"><?php echo $list[$i]['company'] ?></span>
+                        </a>
+                    </li>
+                    <li class="gall_text_href2 ellipsis"><span class="<?php echo ($list[$i]['sr_time12'] >= G5_TIME_YMD) ? " font700":"";?><?php echo ($list[$i]['sr_time13'] >= G5_TIME_YMD) ? " service_color":"";?><?php echo ($list[$i]['sr_time14'] >= G5_TIME_YMD) ? " service_bg":"";?>">  <a href="<?php echo $list[$i]['href'] ?>"><?php echo $list[$i]['wr_subject'] ?></a></span></li>
+                    <?php
+                    $checkout = $list[$i]['closing_date'];
+                    $checkin = G5_TIME_YMD;
+                    $datediff = strtotime($checkout) - strtotime($checkin);
+                    $Day = floor($datediff/(60*60*24));
+                    ?>				
+                    <li class="data_view2">
+                    <?php if($list[$i]['everyday'] == '채용시까지') { ?>
+                    <span class="main_color"><?php echo ($Day >= 0)?'D-'.$Day:'마감'; ?></span> <span class="g_color">( ~ <?php echo $list[$i]['closing_date'] ?> )</span>
+                    <?php } else { ?>
+                    <span class="sangsiicon">상시모집</span>
+                    <?php } ?> 
+                    </li>
+                    <?php } else {
+                        $img_content = '<li class="gall_href gall_href2"><a href="'.G5_URL.'/services.php"><span style="width:'.$board['bo_casting_push_width'].'px;height:94px"><img src="'.G5_THEME_URL.'/images/none_img.gif"></span></a></li>';
+                        echo $img_content;
+                    } ?>
+            </ul>
+        </li>		
+        <?php } ?>
+    </ul>
+
+</div>
