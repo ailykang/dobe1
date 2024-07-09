@@ -28,13 +28,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     @include_once(get_social_skin_path().'/social_login.skin.php');
     ?>
 
-    <aside id="login_info">
+    <!--aside id="login_info">
         <h2>회원로그인 안내</h2>
         <div>
             <a href="<?php echo G5_BBS_URL ?>/password_lost.php" target="_blank" id="login_password_lost">아이디 비밀번호 찾기</a>
             <a href="./register.php">회원 가입</a>
         </div>
-    </aside>
+    </aside-->
 
     </form>
 
